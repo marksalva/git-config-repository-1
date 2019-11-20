@@ -94,6 +94,15 @@ management:
     web:
       exposure:
         include: health,info,metrics,refresh,bus-refresh,hystrix.stream
+# ==============================================================
+# = Actuator Info
+# ==============================================================
+info:
+  assistenza:
+    nome: "Nicola La Rocca"
+  nome:
+    nome-app: "PriceArt Web Service"
+  profilo: "List100 Con Sconto"
                 
 # ==============================================================
 # = Livello Log di Sicurezza
@@ -103,7 +112,6 @@ logging:
     root: INFO
     org.springframework.cloud: ERROR
 
-    
 # ==============================================================
 # = Proprietà Servizio gestUser
 # ==============================================================           
@@ -111,7 +119,7 @@ gestuser:
   password: BimBumBam_2018
   srvUrl: http://localhost:8019/api/utenti/cerca/userid/
   userId: ReadUser
-  
+
 # ==============================================================
 # = Parametri Sicurezza JWT 
 # ==============================================================
