@@ -5,6 +5,13 @@ application:
 
 spring:
 # ==============================================================
+# = Cloud Parameteres
+# ==============================================================
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+# ==============================================================
 # = Proprietà Fonte Dati PostgreSQL
 # ==============================================================
   datasource:
@@ -46,7 +53,6 @@ spring:
     port: 5672
     username: rabbitmq
     password: rabbitmq
-
 # ==============================================================
 # = Eureka Properties  
 # = Nota: prima di attivare il servizio servono tre heartbeat
