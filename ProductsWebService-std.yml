@@ -4,6 +4,32 @@
 
 spring:
 # ==============================================================
+# = Cloud Parameters
+# ==============================================================
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+# ==============================================================
+# = Proprietà Fonte Dati PostgreSQL
+# ==============================================================
+  datasource:
+    initialization-mode: always
+    password: 123_Stella
+    platform: postgres
+    url: jdbc:postgresql://localhost:5433/AlphaShop
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: true
+# ==============================================================
 # = ZipKin parameters
 # ==============================================================
   zipkin:
@@ -44,33 +70,6 @@ feign:
         connectTimeout: 300000 #5 MINUTI
         readTimeout: 300000
 # ==============================================================
-# = Eureka Properties  
-# = Nota: prima di attivare il servizio servono tre heartbeat
-# ==============================================================
-eureka:
-# ==============================================================
-# = Impostazioni Instance
-# ============================================================== 
-  instance:
-    #intervallo di attesa prima della rimozione del servizio (def 90 sec)
-    lease-expiration-duration-in-seconds: 60
-    #intervallo di invio dell'heartbeat (def 30 sec)
-    leaseRenewalIntervalInSeconds: 15
-    #id di identificazione dell'istanza
-    instanceId: ${server.port}-${spring.application.name}-${seq}
-    #registrazione per indirizzo ip (defualt hostname)
-    preferIpAddress: true
-# ==============================================================
-# = Impostazioni Client
-# ============================================================== 
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-     defaultZone: ${EUREKA_URL:http://user:BimBumBam_2018@localhost:8761/eureka/}
-    #time out di connessione in secondi al server Eureka (def 5 sec) 
-    eureka-server-connect-timeout-seconds: 8 
- # ==============================================================
 # = Actuator Parameters
 # ==============================================================
 management:
