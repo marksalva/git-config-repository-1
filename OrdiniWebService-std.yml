@@ -116,7 +116,6 @@ logging:
    root: INFO
   # Livello di log specifico
    org.springframework.security: DEBUG
-   org.springframework.boot: DEBUG
    org.hibernate: INFO
    org.springframework.web: INFO
    com.xantrix.webapp.controller: INFO
