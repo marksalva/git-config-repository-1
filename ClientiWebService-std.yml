@@ -139,3 +139,21 @@ sicurezza:
     prefix: Bearer 
     expiration: 86400
     secret: 123_Stella
+
+# ==============================================================
+# = Parametri RabbitMQ 
+# ==============================================================
+rabbitmq:
+  queueName: alphashop.order.queue
+  exchangeName: alphashop-exchange
+  routingKey: alphashop.routingkey
+
+# ==============================================================
+# = Parametri Fidelity 
+# ==============================================================  
+fidelity:
+  valminimo: 10
+  valbollino: 5
+  bonusmobile: 2
+
+
