@@ -17,7 +17,7 @@ spring:
     initialization-mode: always
     password: 123_Stella
     platform: postgres
-    url: jdbc:postgresql://localhost:5433/AlphaShop
+    url: jdbc:postgresql://localhost:5433/Alphashop
     username: postgres
   jpa:
     hibernate:
